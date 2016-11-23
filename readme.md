@@ -1,7 +1,7 @@
 ---- 
 # 适配机型：Acer Aspire V5-473G／573G
 
-* 仿冒机型：MacBookPro11,2[^1]
+* 仿冒机型：MacBookPro11,2<sub>1</sub>
 * CPU：Intel Core i5-4200U[^2]
 * GPU：Intel HD Graphics 4400[^3] + NVIDIA Geforce GT750M[^4]
 * SSD：SanDisk SDSSDXPS480G
@@ -42,7 +42,7 @@
 2. 同样因使用 **ApplePS2SmartTouchPad.kext**，触摸板设置页面显示为空白，需使用 El Capitan 的选项文件替换。[^8]
 3. 在切换 *机身内置麦克风* 和 *3.5mm 耳麦* 时不灵敏，比如：不能立即识别插入的 EarPods 的麦克风，或拔出 EarPods 后无法立即切换到内置麦克风。同时，目前暂未能支持 EarPods 按钮的线控，未来或将通过定制 **AppleALC.kext** 解决问题。[^9]
 
-[^1]:	仿冒机型的选择请自便
+<sub>1</sub>:	仿冒机型的选择请自便
 
 [^2]:	其他 CPU 型号需要自行更换对应的 SSDT 补丁以实现完美变频
 
