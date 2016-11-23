@@ -1,11 +1,11 @@
 ---- 
 # 适配机型：Acer Aspire V5-473G／573G
 
-* 仿冒机型：MacBookPro11,2<sub>1</sub>
-* CPU：Intel Core i5-4200U[^2]
-* GPU：Intel HD Graphics 4400[^3] + NVIDIA Geforce GT750M[^4]
+* 仿冒机型：MacBookPro11,2<sup>1</sup>
+* CPU：Intel Core i5-4200U<sup>2</sup>
+* GPU：Intel HD Graphics 4400<sup>3</sup> + NVIDIA Geforce GT750M<sup>4</sup>
 * SSD：SanDisk SDSSDXPS480G
-* 无线网卡：Fenvi BCM94352HMB[^5]
+* 无线网卡：Fenvi BCM94352HMB<sup>5</sup>
 * 有线网卡：RealtekRTL8111
 * 系统版本：macOS Sierra 10.12.1 (16B2657)
 * Clover 版本：3923
@@ -14,7 +14,7 @@
 # 注意事项
 
 ## 系统安装
-1. 进行安装系统前，请先在 Clover 启动选项中 **取消 Intel 集显的注入** 再进入系统安装盘，否则会遇到花屏。[^6]
+1. 进行安装系统前，请先在 Clover 启动选项中 **取消 Intel 集显的注入** 再进入系统安装盘，否则会遇到花屏。<sup>6</sup>
 2. 安装完系统后，为使 kexts 生效，请进入 Recovery HD，在终端中输入命令：`csrutil disable`以关闭 SIP，然后重启。也可使用其他方法关闭 SIP。
 3. 建议自行计算 SMBIOS 中的 **Serial Number**、 **SmUUID** 以及 **Board Serial Number** 注入到 config.plist，以配合 iMessage 与 FaceTime 等功能。[点击查看操作方法](http://bbs.pcbeta.com/viewthread-1679216-1-1.html)
 
@@ -38,24 +38,24 @@
 *使用 BIOS 屏蔽独显是简单粗暴的方法，既容易操作又不会出错。大多数 473G／573G 用户选择 DSDT&SSDT 屏蔽独显以方便在 Windows 下继续使用独显，[点击查看操作方法](https://github.com/Kaijun/Acer-V5-573g-DSDT)*
 
 ## 存在的问题
-1. 因使用 **ApplePS2SmartTouchPad.kext** 以支持多指触控手势，**Fn** 组合键功能受限，尚未实现快捷键调节亮度的功能。或许可以通过 DSDT 补丁实现。[^7]
-2. 同样因使用 **ApplePS2SmartTouchPad.kext**，触摸板设置页面显示为空白，需使用 El Capitan 的选项文件替换。[^8]
-3. 在切换 *机身内置麦克风* 和 *3.5mm 耳麦* 时不灵敏，比如：不能立即识别插入的 EarPods 的麦克风，或拔出 EarPods 后无法立即切换到内置麦克风。同时，目前暂未能支持 EarPods 按钮的线控，未来或将通过定制 **AppleALC.kext** 解决问题。[^9]
+1. 因使用 **ApplePS2SmartTouchPad.kext** 以支持多指触控手势，**Fn** 组合键功能受限，尚未实现快捷键调节亮度的功能。或许可以通过 DSDT 补丁实现。<sup>7</sup>
+2. 同样因使用 **ApplePS2SmartTouchPad.kext**，触摸板设置页面显示为空白，需使用 El Capitan 的选项文件替换。<sup>8</sup>
+3. 在切换 *机身内置麦克风* 和 *3.5mm 耳麦* 时不灵敏，比如：不能立即识别插入的 EarPods 的麦克风，或拔出 EarPods 后无法立即切换到内置麦克风。同时，目前暂未能支持 EarPods 按钮的线控，未来或将通过定制 **AppleALC.kext** 解决问题。<sup>9</sup>
 
-<sub>1</sub>:	仿冒机型的选择请自便
+<sup>1</sup>	仿冒机型的选择请自便
 
-[^2]:	其他 CPU 型号需要自行更换对应的 SSDT 补丁以实现完美变频
+<sup>2</sup>	其他 CPU 型号需要自行更换对应的 SSDT 补丁以实现完美变频
 
-[^3]:	注入为 0x0a16000c
+<sup>3</sup>	注入为 0x0a16000c
 
-[^4]:	需通过 BIOS 禁用，禁用方法见【关于独显屏蔽】
+<sup>4</sup>	需通过 BIOS 禁用，禁用方法见【关于独显屏蔽】
 
-[^5]:	原装网卡 Wi-Fi 功能无解，有需要建议更换为该型号
+<sup>5</sup>	原装网卡 Wi-Fi 功能无解，有需要建议更换为该型号
 
-[^6]:	此处的操作是临时的，下次启动不会生效
+<sup>6</sup>	此处的操作是临时的，下次启动不会生效
 
-[^7]:	若介意该功能缺陷，但不介意缺少多指手势，可更换为 VoodooPS2controller.kext
+<sup>7</sup>	若介意该功能缺陷，但不介意缺少多指手势，可更换为 VoodooPS2controller.kext
 
-[^8]:	所需文件已放置在 etc 文件夹，请自行替换到系统目录下：/System/Library/PreferencePanes
+<sup>8</sup>	所需文件已放置在 etc 文件夹，请自行替换到系统目录下：/System/Library/PreferencePanes
 
-[^9]:	声卡 ID 在 clover 中注入为 86，不需耳麦功能者，建议改为 3 会更为稳定
+<sup>9</sup>	声卡 ID 在 clover 中注入为 86，不需耳麦功能者，建议改为 3 会更为稳定
