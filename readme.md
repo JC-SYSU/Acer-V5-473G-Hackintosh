@@ -1,4 +1,6 @@
+---- 
 # 适配机型：Acer Aspire V5-473G／573G
+
 - 仿冒机型：MacBookPro11,2[^1]
 - CPU：Intel Core i5-4200U[^2]
 - GPU：Intel HD Graphics 4400[^3] + NVIDIA Geforce GT750M[^4]
