@@ -20,10 +20,10 @@
 3. 建议自行计算 SMBIOS 中的 **Serial Number**、 **SmUUID** 以及 **Board Serial Number** 注入到 config.plist，以配合 iMessage 与 FaceTime 等功能。[点击查看操作方法](http://bbs.pcbeta.com/viewthread-1679216-1-1.html)
 
 ## 关于仿冒机型的选择
-* 常见的仿冒机型为 **MacBookAir6,2**，这里则建议使用的仿冒机型为 **MacBookPro11,2** 或以上。
-* 虽然 **MacBookAir6,2** 或 **MacBookPro11,1** 从配置角度而言更接近于我们的机型，但使用这些仿冒机型时，变频策略过于倾向节能，不仅 CPU 在常温下便主动降频，GPU 默认频率也过低，容易出现掉帧卡顿，性能表现与 Windows 10 下产生一定的差异。
-* 若仿冒 **MacBookAir7,2** 和 **MacBookPro12,1** 等采用 Broadwell 处理器的型号时，则变频档位不完全，失去低频档位。
-* 经测试，仿冒 **MacBookPro11,2** 时，变频档位完全，且主频能较好的维持在 1.6 GHz以上。实际使用中，性能与节能兼顾，续航依旧不错。<br>
+常见的仿冒机型为 **MacBookAir6,2**，这里则建议使用的仿冒机型为 **MacBookPro11,2** 或以上。<br><br>
+虽然 **MacBookAir6,2** 或 **MacBookPro11,1** 从配置角度而言更接近于我们的机型，但使用这些仿冒机型时，变频策略过于倾向节能，不仅 CPU 在常温下便主动降频，GPU 默认频率也过低，容易出现掉帧卡顿，性能表现与 Windows 10 下产生一定的差异。<br><br>
+若仿冒 **MacBookAir7,2** 和 **MacBookPro12,1** 等采用 Broadwell 处理器的型号时，则变频档位不完全，失去低频档位。<br><br>
+经测试，仿冒 **MacBookPro11,2** 时，变频档位完全，且主频能较好的维持在 1.6 GHz以上。实际使用中，性能与节能兼顾，续航依旧不错。<br>
         以上的结果均在加入 SSDT 变频补丁的情况下测得。
 
 ## 关于双系统
