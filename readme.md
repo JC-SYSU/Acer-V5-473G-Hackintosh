@@ -1,9 +1,9 @@
 # 适配机型：Acer Aspire V5-473G／573G
-- 仿冒机型：MacBookPro11,2 [^1]
-- CPU：Intel Core i5-4200U [^2]
-- GPU：Intel HD Graphics 4400 [^3]+ NVIDIA Geforce GT750M [^4]
+- 仿冒机型：MacBookPro11,2[^1]
+- CPU：Intel Core i5-4200U[^2]
+- GPU：Intel HD Graphics 4400[^3] + NVIDIA Geforce GT750M[^4]
 - SSD：SanDisk SDSSDXPS480G
-- 无线网卡：Fenvi BCM94352HMB [^5]
+- 无线网卡：Fenvi BCM94352HMB[^5]
 - 有线网卡：RealtekRTL8111
 - 系统版本：macOS Sierra 10.12.1 (16B2657)
 - Clover 版本：3923
@@ -12,7 +12,7 @@
 # 注意事项
 
 ## 系统安装
-1. 进行安装系统前，请先在 Clover 启动选项中 **取消 Intel 集显的注入** 再进入系统安装盘，否则会遇到花屏。 [^6]
+1. 进行安装系统前，请先在 Clover 启动选项中 **取消 Intel 集显的注入** 再进入系统安装盘，否则会遇到花屏。[^6]
 2. 安装完系统后，为使 kexts 生效，请进入 Recovery HD，在终端中输入命令：`csrutil disable`以关闭 SIP，然后重启。也可使用其他方法关闭 SIP。
 3. 建议自行计算 SMBIOS 中的 **Serial Number**、 **SmUUID** 以及 **Board Serial Number** 注入到 config.plist，以配合 iMessage 与 FaceTime 等功能。[点击查看操作方法][1]
 
@@ -36,9 +36,10 @@
 *使用 BIOS 屏蔽独显是简单粗暴的方法，既容易操作又不会出错。大多数 473G／573G 用户选择 DSDT&SSDT 屏蔽独显以方便在 Windows 下继续使用独显，[点击查看操作方法][4]*
 
 ## 存在的问题
-1. 因使用 **ApplePS2SmartTouchPad.kext** 以支持多指触控手势，**Fn** 组合键功能受限，尚未实现快捷键调节亮度的功能。或许可以通过 DSDT 补丁实现。 [^7]
-2. 同样因使用 **ApplePS2SmartTouchPad.kext**，触摸板设置页面显示为空白，需使用 El Capitan 的选项文件替换。 [^8]
-3. 在切换 *机身内置麦克风* 和 *3.5mm 耳麦* 时不灵敏，比如：不能立即识别插入的 EarPods 的麦克风，或拔出 EarPods 后无法立即切换到内置麦克风。同时，目前暂未能支持 EarPods 按钮的线控，未来或将通过定制 **AppleALC.kext** 解决问题。 [^9]
+1. 因使用 **ApplePS2SmartTouchPad.kext** 以支持多指触控手势，**Fn** 组合键功能受限，尚未实现快捷键调节亮度的功能。或许可以通过 DSDT 补丁实现。[^7]
+2. 同样因使用 **ApplePS2SmartTouchPad.kext**，触摸板设置页面显示为空白，需使用 El Capitan 的选项文件替换。[^8]
+3. 在切换 *机身内置麦克风* 和 *3.5mm 耳麦* 时不灵敏，比如：不能立即识别插入的 EarPods 的麦克风，或拔出 EarPods 后无法立即切换到内置麦克风。同时，目前暂未能支持 EarPods 按钮的线控，未来或将通过定制 **AppleALC.kext** 解决问题。[^9]
+
 
 
 
